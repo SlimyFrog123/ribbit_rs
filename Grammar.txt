@@ -1,0 +1,20 @@
+Grammar
+
+TYPE[IDENTIFIER] NAME[IDENTIFIER] "=" VALUE[ANY] - Variable declaration, first time. Check that types match between the declared and assigned values.
+NAME[IDENTIFIER] "=" VALUE[ANY] - Variable assignment, must be declared fist time. Check that the variable type and the assigned value are of the same type, otherwise panic!
+
+NAME[IDENTIFIER]"++" - Increment value by 1, check if the value is an integer or a float first.
+NAME[IDENTIFIER]"--" - Decrement the value by 1, check if the variable is an integer or float first.
+
+TYPE[IDENTIFIER] NAME[IDENTIFIER]"("[OPTIONAL! PARAMETERS[ANY]]")" "{" [OPTIONAL! BODY[ANY]] "}" - Function. TYPE is the return type, every path should return a value of the specified return type, unless it is void, where there will be no requirement to return, and if you attempt to return any value other than void (e.g. "return 3;" instead of "return;" in a void function) it will panic!
+
+NAME(IDENTIFIER)"("[OPTIONAL! PARAMETERS[ANY]]")"";" - Invocation.
+
+Order of Operations
+
+ - Parenthesis
+ - ? Exponents
+ - Multiplication
+ - Division
+ - Addition
+ - Subtraction
