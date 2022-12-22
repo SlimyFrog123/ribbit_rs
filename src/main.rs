@@ -4,6 +4,7 @@ mod state;
 mod token;
 mod parser;
 mod helper_functions;
+mod nodes;
 
 // Internal modules.
 use token::*;
@@ -20,8 +21,4 @@ fn main() {
     let tokens: Vec<Token> = lexer.lex();
 
     print_tokens(&tokens);
-
-    let mut parser: Parser = Parser::new(tokens);
-    let ast: Vec<Node> = parser.parse();
-
 }

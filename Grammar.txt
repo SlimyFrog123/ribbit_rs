@@ -18,3 +18,14 @@ Order of Operations
  - Division
  - Addition
  - Subtraction
+
+ Nodes:
+  - Conditional ( Condition<Vec<Node>> ) with method to calculate condition.
+  - Variable ( Variable Name )
+  - Assign ( Variable Name, Value<List<Vec>>)
+  - Invocation ( Function Name, Parameters<Vec<Node>> )
+  - Function Definition ( Function Name<String>, Parameters<Vec<(Node?|Parameter?|Token?)>>, Body<Vec<Node>>, Return Type<String> )
+  - ? Loop ( Condition<Conditional> + Body<List<Vec>>)
+
+Syntax?:
+"var" NAME "<" TYPE ">" = VALUE
